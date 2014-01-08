@@ -1,11 +1,11 @@
 package com.example.androidtest;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	public final String TAG = "Main Activity";
@@ -25,8 +25,11 @@ public class MainActivity extends Activity {
 
 	public void button_clicked(View v) {
 		Log.i(TAG, "button_clicked");
-		TextView t = (TextView)findViewById(R.id.hellotext);
-		t.setText("Clicked");
+		//TextView t = (TextView)findViewById(R.id.hellotext);
+		//t.setText("Clicked");
+		
+		Intent intent = new Intent(this, EditActivity.class);	//must send context
+		startActivity(intent);
 	}
 	
 	public void onBack() {
