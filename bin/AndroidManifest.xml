@@ -12,7 +12,8 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:uiOptions="splitActionBarWhenNarrow" >
         <activity
             android:name="com.example.androidtest.MainActivity"
             android:label="@string/app_name" >
@@ -25,6 +26,10 @@
         <activity
             android:name="com.example.androidtest.EditActivity"
             android:label="@string/title_activity_edit" >
+        </activity>
+        <activity
+            android:name="com.example.androidtest.BaseActivity"
+            android:label="@string/title_activity_base" >
         </activity>
     </application>
 

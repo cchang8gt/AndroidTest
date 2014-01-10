@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class EditActivity extends Activity {
+public class EditActivity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -15,13 +15,15 @@ public class EditActivity extends Activity {
 		setContentView(R.layout.activity_edit);
 	}
 
+	/*
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.edit, menu);
 		return true;
 	}
-
+	*/
+	
 	public void addComment(View v) {
 		String name, comment, other;
 		
@@ -34,8 +36,8 @@ public class EditActivity extends Activity {
 		other = otherIn.getText().toString();
 		
 		TextView nameOut = (TextView)findViewById(R.id.name);
-		TextView commentOut = (EditText)findViewById(R.id.comment);
-		TextView otherOut = (EditText)findViewById(R.id.other);
+		TextView commentOut = (TextView)findViewById(R.id.comment);
+		TextView otherOut = (TextView)findViewById(R.id.other);
 		
 		nameOut.setText(name);
 		commentOut.setText(comment);

@@ -9,5 +9,9 @@
     <string name="comment">Comment</string>
     <string name="other">Other</string>
     <string name="button">Comment</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="twitter">Twitter</string>
+    <string name="facebook">Facebook</string>
+    <string name="refresh">Refresh</string>
 
 </resources>
