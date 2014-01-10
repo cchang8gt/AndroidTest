@@ -38,8 +38,7 @@
         android:id="@+id/button_comment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button"
-        android:onClick="addComment" />
+        android:text="@string/button" />
 
     <TextView
         android:id="@+id/name"

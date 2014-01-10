@@ -24,7 +24,11 @@ public class EditActivity extends BaseActivity {
 	}
 	*/
 	
+	/*
+	 * Buttons in fragments don't use the onClick property.
+	 */
 	public void addComment(View v) {
+		/*
 		String name, comment, other;
 		
 		EditText nameIn = (EditText)findViewById(R.id.nameIn);
@@ -42,5 +46,6 @@ public class EditActivity extends BaseActivity {
 		nameOut.setText(name);
 		commentOut.setText(comment);
 		otherOut.setText(other);
+		*/
 	}
 }
