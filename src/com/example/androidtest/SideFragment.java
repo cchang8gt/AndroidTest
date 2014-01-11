@@ -15,11 +15,11 @@ public class SideFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		//View view;
-		//Have to look in the view you inflated when you use a fragment
+		//Have to look in the view you inflated when you use a fragment  android:onClick="button_clicked"
 		view = inflater.inflate(R.layout.activity_edit, container, false);
 		
-		Button comment = (Button)view.findViewById(R.id.comment);
-		comment.setOnClickListener(new OnClickListener() {
+		Button button_comment = (Button)view.findViewById(R.id.button_comment);
+		button_comment.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
@@ -44,6 +44,7 @@ public class SideFragment extends Fragment {
 			}
 			
 		});
+		
 		return view;
 	}	
 }

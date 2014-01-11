@@ -1,29 +1,55 @@
 package com.example.androidtest;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
 
 public class EditActivity extends BaseActivity {
-
+	Fragment picture = new PictureFragment();
+	Fragment side = new SideFragment();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_edit);
+		setContentView(R.layout.activity_edit_frame);
+		
+		//Gets manager from /libs/android-support-v4.jar (if used this package)
+		FragmentManager fragment = getSupportFragmentManager();	
+		FragmentTransaction fragmentTransaction = fragment.beginTransaction();
+		
+		//create new fragment to replace
+		Fragment frag = new SideFragment();
+		
+		//replace frag_frame with our side fragment
+		fragmentTransaction.replace(R.id.frag_frame, frag, "SIDE");
+		fragmentTransaction.commit();
 	}
 
-	/*
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.edit, menu);
 		return true;
 	}
-	*/
 	
+	public void swapFrag(View v) {
+		FragmentManager fragmentManager = getSupportFragmentManager();
+		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+		
+		Fragment current = fragmentManager.findFragmentByTag("SIDE");
+		
+		if(current.isVisible()) {
+			fragmentTransaction.replace(R.id.frag_frame, picture, "PIC");
+		}
+		else {
+			fragmentTransaction.replace(R.id.frag_frame, side, "SIDE");
+		}
+		fragmentTransaction.addToBackStack(null);
+		fragmentTransaction.commit();
+	}
 	/*
 	 * Buttons in fragments don't use the onClick property.
 	 */
