@@ -14,20 +14,23 @@ public class DbHelper extends SQLiteOpenHelper {
 	public static final String COMMENT = "comment";
 	public static final String EMAIL = "email";
 	public static final String TIME = "time";
+	public static final int VERSION = 1;
 	
 	private final String createDB = "create table if not exists " + TABLE_NAME + " ( "
-			+ C_ID + " integer primary key autoincrement " 
+			+ C_ID + " integer primary key autoincrement, " 
 			+ NAME + " text, "
 			+ COMMENT + " text, "
 			+ EMAIL + " text, "
 			+ TIME + " text); ";
 	
-	public DbHelper(Context context, String name, CursorFactory factory,
-			int version) {
+	public DbHelper(Context context, String name, CursorFactory factory, int version) {
 		super(context, DATABASE_NAME, factory, version);
 		// TODO Auto-generated constructor stub
 	}
 
+	public DbHelper(Context context) {
+		super(context, DATABASE_NAME, null, VERSION);
+	}
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub

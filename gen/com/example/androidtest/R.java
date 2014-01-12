@@ -63,10 +63,10 @@ public final class R {
         public static final int app_name=0x7f050000;
         public static final int button=0x7f050007;
         public static final int comment=0x7f050005;
+        public static final int email=0x7f050006;
         public static final int facebook=0x7f05000a;
         public static final int hello_world=0x7f050002;
         public static final int name=0x7f050004;
-        public static final int other=0x7f050006;
         public static final int refresh=0x7f05000b;
         public static final int title_activity_base=0x7f050008;
         public static final int title_activity_edit=0x7f050003;
